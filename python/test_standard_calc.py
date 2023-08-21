@@ -33,3 +33,15 @@ def test_bound_boundary2():    # test the boundary cases
 
 def test_between_basic1():
     assert is_angle_between(0, 1, 2)
+
+
+def test_between_basic2():
+    assert is_angle_between(45, 90, 270) == False
+
+
+def test_between_overlapping1():
+    assert is_angle_between(0, 0, 180) == False
+
+
+def test_between_overlapping2():
+    assert is_angle_between(0, 90, 90) == False
