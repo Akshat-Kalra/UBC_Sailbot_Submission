@@ -32,4 +32,4 @@ def test_bound_boundary2():    # test the boundary cases
 
 
 def test_between_basic1():
-    assert is_angle_between(0, 1, 2) == True
+    assert is_angle_between(0, 1, 2)
