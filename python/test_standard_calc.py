@@ -36,12 +36,12 @@ def test_between_basic1():
 
 
 def test_between_basic2():
-    assert is_angle_between(45, 90, 270) == False
+    assert not is_angle_between(45, 90, 270)
 
 
 def test_between_overlapping1():
-    assert is_angle_between(0, 0, 180) == False
+    assert not is_angle_between(0, 0, 180)
 
 
 def test_between_overlapping2():
-    assert is_angle_between(0, 90, 90) == False
+    assert not is_angle_between(0, 90, 90)
