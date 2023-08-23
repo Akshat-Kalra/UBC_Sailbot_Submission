@@ -31,17 +31,29 @@ def test_bound_boundary2():    # test the boundary cases
 """ Tests for is_angle_between() """
 
 
-def test_between_basic1():
+def test_between_basic1():    # basic test using positive angles
     assert is_angle_between(0, 1, 2)
 
 
-def test_between_basic2():
+def test_between_basic2():    # another basic test using positive angles
     assert not is_angle_between(45, 90, 270)
 
 
-def test_between_overlapping1():
+def test_for_overlapping1():    # test for overlapping angles
     assert not is_angle_between(0, 0, 180)
 
 
-def test_between_overlapping2():
+def test_for_overlapping2():    # another test for overlapping angles
     assert not is_angle_between(0, 90, 90)
+
+
+def test_for_negatives():    # test for negative angles
+    assert is_angle_between(-30, -15, 0)
+
+
+def test_for_identicals():    # test for identical angles
+    assert not is_angle_between(30,30,30)
+
+
+def test_for_bigger_angles():    # test for angles that lie in the third and fourth quandrent
+    assert is_angle_between(181, 270, 359)
