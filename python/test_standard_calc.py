@@ -55,5 +55,5 @@ def test_for_identicals():    # test for identical angles
     assert not is_angle_between(30, 30, 30)
 
 
-def test_for_bigger_angles():    # test for angles that lie in the third and fourth quandrent
+def test_for_bigger_angles():    # test for angles that lie in the third and fourth quadrent
     assert is_angle_between(181, 270, 359)
