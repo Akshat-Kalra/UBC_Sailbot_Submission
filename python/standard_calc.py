@@ -33,4 +33,4 @@ def is_angle_between(first_angle, middle_angle, second_angle):
     middle_angle = (middle_angle + 180) % 360 - 180
     second_angle = (second_angle + 180) % 360 - 180
 
-    return first_angle < middle_angle < second_angle
+    return first_angle < middle_angle < second_angle or second_angle < middle_angle < first_angle
