@@ -32,8 +32,8 @@ def is_angle_between(first_angle, middle_angle, second_angle):
     Returns:
         bool: True when `middle_angle` is not in the reflex angle of `first_angle` and `second_angle`, false otherwise.
     """
-    first_angle = (first_angle + 180) % 360 - 180
-    middle_angle = (middle_angle + 180) % 360 - 180
-    second_angle = (second_angle + 180) % 360 - 180
+    first_angle = bound_to_180(first_angle)
+    middle_angle = bound_to_180(middle_angle)
+    second_angle = bound_to_180(second_angle)
 
     return first_angle < middle_angle < second_angle or second_angle < middle_angle < first_angle
