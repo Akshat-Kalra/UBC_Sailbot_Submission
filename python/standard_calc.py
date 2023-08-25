@@ -11,7 +11,7 @@ def bound_to_180(angle):
     Returns:
         float: The bounded angle in degrees.
     """
-    if 0 <= (angle%360) < 179:
+    if 0 <= (angle % 360) < 179:
         return angle % 360
     else:
         return (angle % 360) - 360
